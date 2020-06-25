@@ -29,21 +29,23 @@ body{
 
 .fragment{
     display: flex;
+    flex-wrap: wrap;
     padding: 3rem 3.5rem;
 }
 
-.fragment h2{
+.fragment .title{
     color: #FFF;
-    min-width: 5rem;
+    flex-basis: 100px;
     text-align: right;
     margin: 1rem;
 }
 
 
-.fragment > div{
+.fragment > .details{
     padding-left: 3rem;
     border-left: solid 1px rgba(255,255,255,0.259);
     color: rgba(255,255,255,0.831);
+    width: 260px;
 }
 
 
@@ -103,24 +105,19 @@ a.button{
     line-height: 2.5rem;
 }
 
-/* ul li::before{
-    content: '\2713';
-    border-radius: 100%;
-    height: 1.25rem;
-    min-width: 1.25rem;
-    border:solid 1px rgba(255,255,255,0.259)
-} */
-
-
 
 #about{
     background-color: #4299FF;
 }
 
-#about > div{
+#about > .details{
     font-size: 0.875em;
     line-height: 1.75;
     font-weight: 300;
+}
+
+#about p{
+    color: rgba(255,255,255,0.831);
 }
 
 #work{
@@ -133,7 +130,12 @@ a.button{
 
 
 
-#about p{
-    color: rgba(255,255,255,0.831);
+@media (max-width: 680px) {
+    .fragment > div.details{
+        padding-left: 0;
+        width: 330px;
+        padding-top: 2rem;
+        border-left: none;
+        border-top: solid 1px rgba(255,255,255,0.259);
+    }
 }
-

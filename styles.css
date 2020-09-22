@@ -1,5 +1,12 @@
 @import url('./reset.css');
 
+html { font-size: 100%; } /*16px*/
+h1 { font-size: 2.074em; }
+h2 { font-size: 1.728em; }
+h3 { font-size: 1.44em; }
+h4 { font-size: 1.2em; }
+.details{ font-size: 1.2em;}
+
 body{
 
     background-color: #C7E3F2;
@@ -10,8 +17,6 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 4rem;
-  
-    /* justify-content:center; */
 }
 
 #container{
@@ -64,7 +69,6 @@ body{
 }
 
 #me > div:last-child > h1{
-    font-size: 2em;
     line-height: 1.25;
     font-weight: 400;
     color: #383838;
@@ -72,7 +76,6 @@ body{
 
 #me > div:last-child > h3{
     color: rgba(0,0,0,0.522);
-    font-size: 1em;
     line-height: 1.25;
     font-weight: 400; 
     margin-top: 1rem;
@@ -97,6 +100,11 @@ ul li p{
     border: solid 1px rgba(255,255,255,0.259);
 }
 
+.button:hover{
+    background-color: #115fbe;
+}
+
+
 a.button{
     padding: .5rem 1.25rem;
     text-decoration: none;
@@ -111,7 +119,6 @@ a.button{
 }
 
 #about > .details{
-    font-size: 0.875em;
     line-height: 1.75;
     font-weight: 300;
 }
@@ -131,11 +138,25 @@ a.button{
 
 
 @media (max-width: 680px) {
+    html { font-size: 125%; }
+    ul li{
+        margin-left: 1rem;
+    }
+    .fragment > div.title{
+        text-align: left;
+        margin-left: 0;
+        min-width: 180px;
+    }
     .fragment > div.details{
         padding-left: 0;
         width: 330px;
         padding-top: 2rem;
         border-left: none;
         border-top: solid 1px rgba(255,255,255,0.259);
+    }
+    #wrapper{
+        padding-left: 10px;
+        padding-right: 10px;
+
     }
 }
